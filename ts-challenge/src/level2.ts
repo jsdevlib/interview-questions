@@ -9,12 +9,16 @@ export class MyDictionaryHigh {
         const start = word.slice(0, i)
         const end = word.slice(i + 1)
 
+        // console.log(`${letter} - ${start}*${end}`)
+
         const partialWord = `${start}*${end}`
         acc[partialWord] = true
       })
 
       return acc
     }, {})
+
+    console.log(wordMap)
 
     this._dic = wordMap
   }
